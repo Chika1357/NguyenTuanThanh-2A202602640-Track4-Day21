@@ -1,22 +1,20 @@
-# Báo cáo Day 6: [ĐIỀN tên đề tài ngắn]
+# Báo cáo Day 6: Kiểm tra calibration LiDAR-camera bằng projection
 
 > Thay **mọi** ô có chữ ĐIỀN nằm trong ngoặc vuông bằng nội dung của bạn, xoá luôn cả dấu ngoặc vuông. Lệnh `python tools/check_submission.py` sẽ báo FAIL nếu còn sót bất kỳ chỗ nào.
 
-- **Họ tên:** [ĐIỀN]
-- **MSSV:** [ĐIỀN] (phải trùng với MSSV trong tên repo `<HoVaTen>-<MSSV>-Track4-Day21`)
-- **Lớp:** [ĐIỀN]
-- **Link repo:** [ĐIỀN]
-- **Topic:** [ĐIỀN một chữ cái A/B/C/D/E/F] — [ĐIỀN tên topic]
-- **Dataset:** [ĐIỀN một hoặc nhiều trong: data/synthetic, data/kitti_mini, data/nuscenes_mini_subset, log riêng]
-- **Các frame đã dùng:** [ĐIỀN danh sách frame id, ví dụ 000011, 000049 hoặc scene-0103_010]
+- **Họ tên:** Nguyễn Tuấn Thành
+- **MSSV:** 2A202602640
+- **Lớp:** VinUni AI20K — Track 4 (Computer Vision and Robotics)
+- **Link repo:** https://github.com/Chika1357/NguyenTuanThanh-2A202602640-Track4-Day21
+- **Topic:** A — LiDAR-camera projection QA
+- **Dataset:** data/kitti_mini (chính), data/nuscenes_mini_subset (so sánh), data/synthetic (debug)
+- **Các frame đã dùng:** toàn bộ 20 frame kitti_mini; 80 keyframe nuScenes (scene-0103_000…039, scene-1094_000…039); synthetic 000000
 
 > Hãy viết ngắn: mỗi mục từ 3 đến 8 dòng, ưu tiên số liệu và hình ảnh.
 
 ## 1. Claim
 
-Một câu khẳng định kỹ thuật có thể kiểm chứng. Ví dụ: *"Lệch yaw 1° làm 12% điểm LiDAR rơi ra khỏi vật thể ở 30 m, phát hiện được bằng edge-alignment score với ngưỡng X."*
-
-[ĐIỀN]
+**Claim (nháp):** Trên KITTI, lệch yaw extrinsic 1° làm hơn 10% điểm LiDAR thuộc object (điểm nằm trong 3D box GT) rơi ra ngoài 2D box của chính object đó, và tỉ lệ lệch tăng theo mức perturb từ 0.5° đến 3°.
 
 ## 2. Evidence
 
